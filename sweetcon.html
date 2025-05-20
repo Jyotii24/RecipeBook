@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food List</title>
+    <link rel="stylesheet" href="try1.css">
+    <style>
+        /* Existing CSS */
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://img.freepik.com/premium-photo/circle-candy-is-surrounded-by-white-background_655090-43042.jpg?w=1380");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the background image */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(248, 243, 243, 0.7); /* More transparent background */
+    border: 2px solid rgb(168, 80, 80); /* Black border */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Enhanced black box shadow */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 80px;
+}
+
+
+
+        
+        h1 {
+            font-size: 28px; /* Increased font-size */
+            margin-bottom: 20px;
+            animation: slideDown 1s ease-in-out;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            font-size: 20px; /* Increased font-size */
+            margin: 15px 0; /* Increased margin */
+            color: #050101;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        
+        .food-container {
+            display: flex;
+            align-items: center;
+        }
+
+      .image-container {
+            font-size: 80px; /* इमोजी का आकार */
+            margin-right: 10px; /* इमोजी और टेक्स्ट के बीच का अंतर */
+        }
+
+      .food-name {
+            font-size: 20px; /* टेक्स्ट का आकार */
+        }
+
+
+        button {
+            padding: 10px 15px; /* Increased padding */
+            font-size: 16px; /* Increased font-size */
+            background-color: rgb(255, 255, 10);
+            color: brown;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            li {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            button {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+        }
+        .image-container, img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            
+        }
+    </style>
+</head>
+<body>
+    <header style="position: fixed; top: 0; width: 100%; z-index: 100;  ">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ECZhfVK6YyZnvSCAcRXuS1to6a3W-7Hc7g&s" alt="logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Recipes</a>
+                    <div class="dropdown">
+                        <a href="#breakfast">Breakfast</a>
+                        <a href="#lunch">Lunch</a>
+                        <a href="#dinner">Dinner</a>
+                        <a href="#dessert">Dessert</a>
+                        <a href="#drink">Drink</a>
+                        <a href="#snacks">Snacks & Appetizers</a>
+                        <a href="#holiday">Holiday & Seasonal Recipes</a>
+                        <a href="#diet">Recipes by Diet</a>
+                        <a href="#method">Recipe by Method</a>
+                        <a href="#ingredient">Recipe by Ingredient</a>
+                        <a href="#time-ease">Recipe by Time & Ease</a>
+                        <a href="#cuisine">Recipe by Cuisine</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Easy Pastas</a>
+                    <div class="dropdown">
+                        <a href="#quick-dinner">Quick Dinner</a>
+                        <a href="#easy-healthy">Easy & Healthy</a>
+                        <a href="#quick-vegetarian">Quick Vegetarian</a>
+                        <a href="#easy-pastas">Easy Pastas</a>
+                        <a href="#easy-chicken">Easy Chicken</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Table</a>
+                    <div class="dropdown">
+                        <a href="#recent">Most Recent</a>
+                        <a href="#news-trends">News & Trends</a>
+                        <a href="#voices">Voices</a>
+                        <a href="#groceries">Groceries</a>
+                        <a href="#features">Features</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Holidays & Seasons</a>
+                    <div class="dropdown">
+                        <a href="#retro-summer">Our Favorite Retro Summer Baking Recipes</a>
+                        <a href="#back-school">Back-to-School Dinner Solutions</a>
+                        <a href="#labor-day">Labor Day Recipes</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li><a href="#">About Us</a></li>
+                <li> <a href="s.html"><button class="add">Add </button></a>
+                </li>
+            </ul>
+            <div class="search-bar">
+            <input type="text" id="search-bar" placeholder="Search recipes...">
+                <button class="search">🔍</button>
+            
+            <a href="re.html"><button class="heart-icon">❤️</button></a>
+        </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Sweet Menu</h1>
+        <ul id="food-list">
+            <li>
+                <div class="food-container">
+                    <div class="image-container"><img src="https://static.vecteezy.com/system/resources/previews/026/516/220/large_2x/delicious-gulab-jamun-dark-background-with-empty-space-for-text-free-photo.jpg" alt="Gulab Jamun" width="50"></div>
+                    <span class="food-name">Gulab Jamun</span>
+                </div>
+                <button class="order-btn" data-food="Gulab Jamun"><a href="sweets1.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div class="image-container"><img src="https://png.pngtree.com/thumb_back/fw800/background/20240404/pngtree-jalebi-an-indian-sweet-made-on-occasions-and-festivals-like-holi-image_15707477.jpg" alt="Jalebi" width="50"></div>
+                    <span class="food-name">Jalebi</span>
+                </div>
+                <button class="order-btn" data-food="Jalebi"><a href="sweets2.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div class="image-container"><img src="https://www.shutterstock.com/image-photo/indian-sweets-kaju-barfi-kalakand-260nw-738932695.jpg" alt="Barfi" width="50"></div>
+                    <span class="food-name">Barfi</span>
+                </div>
+                <button class="order-btn" data-food="Barfi"><a href="sweets3.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div class="image-container"><img src="https://thumbs.dreamstime.com/b/kaju-katli-barfi-diamond-shape-indian-sweet-made-using-cashew-stock-image-202344569.jpg" alt="Kaju Katli" width="50"></div>
+                    <span class="food-name">Kaju Katli</span>
+                </div>
+                <button class="order-btn" data-food="Kaju Katli"><a href="sweets4.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div class="image-container"><img src="https://img.freepik.com/premium-photo/close-up-mysore-pak-indian-sweet-prepared-ghee_698447-2769.jpg" alt="Mysore Pak" width="50"></div>
+                    <span class="food-name">Mysore Pak</span>
+                </div>
+                <button class="order-btn" data-food="Mysore Pak"><a href="sweets5.html">Go To Recipe</a></button>
+            </li> 
+</body>
+</html>

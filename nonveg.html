@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="try1.css">
+    <title>Food List</title>
+    <style>
+        /* Existing CSS */
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://thumbs.dreamstime.com/z/sushi-japanese-food-white-japanese-plate-white-background-sushi-japanese-food-white-japanese-plate-white-317241517.jpg?ct=jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the background image */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(248, 243, 243, 0.7); /* More transparent background */
+    border: 2px solid rgb(168, 80, 80); /* Black border */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Enhanced black box shadow */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 80px;
+}
+
+
+
+        
+        h1 {
+            font-size: 28px; /* Increased font-size */
+            margin-bottom: 20px;
+            animation: slideDown 1s ease-in-out;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            font-size: 20px; /* Increased font-size */
+            margin: 15px 0; /* Increased margin */
+            color: #050101;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+       
+        .food-container {
+            display: flex;
+            align-items: center;
+        }
+
+      .emoji {
+            font-size: 80px; /* इमोजी का आकार */
+            margin-right: 10px; /* इमोजी और टेक्स्ट के बीच का अंतर */
+        }
+
+      .food-name {
+            font-size: 20px; /* टेक्स्ट का आकार */
+        }
+
+
+        button {
+            padding: 10px 15px; /* Increased padding */
+            font-size: 16px; /* Increased font-size */
+            background-color: rgb(255, 255, 10);
+            color: brown;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                max-width: 100%;
+                /* padding: 15px; */
+                /* padding: 100px; */
+                padding-top: 60%;
+
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            li {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            button {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+        }
+        .image-container, img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            
+        }
+        @media (max-width: 985px) {
+            .container{
+                padding-top: 40%;
+            }
+        }
+        @media (max-width: 591px) {
+            .container{
+                padding-top: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="position: fixed; top: 0; width: 100%; z-index: 100;  ">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ECZhfVK6YyZnvSCAcRXuS1to6a3W-7Hc7g&s" alt="logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Recipes</a>
+                    <div class="dropdown">
+                        <a href="#breakfast">Breakfast</a>
+                        <a href="#lunch">Lunch</a>
+                        <a href="#dinner">Dinner</a>
+                        <a href="#dessert">Dessert</a>
+                        <a href="#drink">Drink</a>
+                        <a href="#snacks">Snacks & Appetizers</a>
+                        <a href="#holiday">Holiday & Seasonal Recipes</a>
+                        <a href="#diet">Recipes by Diet</a>
+                        <a href="#method">Recipe by Method</a>
+                        <a href="#ingredient">Recipe by Ingredient</a>
+                        <a href="#time-ease">Recipe by Time & Ease</a>
+                        <a href="#cuisine">Recipe by Cuisine</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Easy Pastas</a>
+                    <div class="dropdown">
+                        <a href="#quick-dinner">Quick Dinner</a>
+                        <a href="#easy-healthy">Easy & Healthy</a>
+                        <a href="#quick-vegetarian">Quick Vegetarian</a>
+                        <a href="#easy-pastas">Easy Pastas</a>
+                        <a href="#easy-chicken">Easy Chicken</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Table</a>
+                    <div class="dropdown">
+                        <a href="#recent">Most Recent</a>
+                        <a href="#news-trends">News & Trends</a>
+                        <a href="#voices">Voices</a>
+                        <a href="#groceries">Groceries</a>
+                        <a href="#features">Features</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Holidays & Seasons</a>
+                    <div class="dropdown">
+                        <a href="#retro-summer">Our Favorite Retro Summer Baking Recipes</a>
+                        <a href="#back-school">Back-to-School Dinner Solutions</a>
+                        <a href="#labor-day">Labor Day Recipes</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li><a href="#">About Us</a></li>
+                <li> <a href="s.html"><button class="add">Add </button></a></li>
+
+            </ul>
+            <div class="search-bar">
+            <input type="text" id="search-bar" placeholder="Search recipes...">
+                <button class="search">🔍</button>
+            
+            <a href="re.html"><button class="heart-icon">❤️</button></a>
+        </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Non-Veg Food Menu</h1>
+        <ul id="food-list">
+            <li>
+                <div class="food-container">
+                    <div class="image-container"><img src="https://static.vecteezy.com/system/resources/previews/029/863/727/non_2x/of-tikka-masala-as-a-dish-in-a-high-end-restaurant-generative-ai-photo.jpg" alt="Butter Chicken" class="emoji"></div>
+                    <span class="food-name">Butter Chicken</span>
+                </div>
+                <button class="order-btn" data-food="Butter Chicken"><a href="Non1.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div><img src="https://png.pngtree.com/thumb_back/fh260/background/20240204/pngtree-vegetarian-hyderabadi-dum-biryani-ramadan-food-image_15591828.png" alt="Hyderabadi Dum Biryani" class="emoji"></div>
+                    <span class="food-name">Hyderabadi Dum Biryani</span>
+                </div>
+                <button class="order-btn" data-food="Hyderabadi Dum Biryani"><a href="Non2.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div><img src="https://png.pngtree.com/thumb_back/fw800/background/20231010/pngtree-traditional-indian-fish-curry-kerala-s-special-seer-fish-dish-image_13625580.png" alt="Fish Curry" class="emoji"></div>
+                    <span class="food-name">Fish Curry</span>
+                </div>
+                <button class="order-btn" data-food="Fish Curry"><a href="Non3.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div><img src="https://thumbs.dreamstime.com/z/homemade-spicy-egg-curry-roast-kerala-cuisine-popular-side-dish-bowl-delicious-tasty-egg-curry-masala-roast-154250107.jpg?ct=jpeg" alt="Egg Curry" class="emoji"></div>
+                    <span class="food-name">Egg Curry</span>
+                </div>
+                <button class="order-btn" data-food="Egg Curry"><a href="Non4.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div><img src="https://static.vecteezy.com/system/resources/previews/010/913/630/large_2x/chicken-tikka-on-the-plate-and-white-background-photo.jpg" alt="Tandoori Chicken" class="emoji"></div>
+                    <span class="food-name">Tandoori Chicken</span>
+                </div>
+                <button class="order-btn" data-food="Tandoori Chicken"><a href="Non5.html">Go To Recipe</a></button>
+            </li>  
+        </ul>
+  
+    </div>
+</body>
+</html>

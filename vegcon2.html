@@ -1,0 +1,295 @@
+<style></style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="try1.css">
+    <title>Food List</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://w0.peakpx.com/wallpaper/644/692/HD-wallpaper-healthy-food-diet-concepts-vegetables-mountain-of-vegetables.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the background image */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(248, 243, 243, 0.7); /* More transparent background */
+    border: 2px solid rgb(7, 6, 6); /* Black border */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Enhanced black box shadow */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 100px;
+}
+
+
+
+        
+        h1 {
+            font-size: 28px; /* Increased font-size */
+            margin-bottom: 20px;
+            animation: slideDown 1s ease-in-out;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+            gap: 30px; /* Increased gap between list items */
+        }
+        
+        li {
+            font-size: 20px; /* Increased font-size */
+            margin: 15px 0; /* Increased margin */
+            color: #050101;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        
+        .food-container {
+            display: flex;
+            align-items: center;
+        }
+
+      .emoji {
+            font-size: 80px; /* इमोजी का आकार */
+            margin-right: 10px; /* इमोजी और टेक्स्ट के बीच का अंतर */
+        }
+
+      .food-name {
+            font-size: 25px; /* टेक्स्ट का आकार */
+            margin-left: 20px;
+        }
+
+
+        button {
+            padding: 10px 15px; /* Increased padding */
+            font-size: 16px; /* Increased font-size */
+            background-color:yellow;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            li {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            button {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+        .image-container, img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            
+        }
+        .add{
+            color: brown;
+        }
+        @media (max-width: 988px) {
+        .container{
+            padding-top: 300px;
+        }           
+        }
+
+            
+    </style>
+</head>
+<body>
+    <header style="position: fixed; top: 0; width: 100%; z-index: 100;  ">
+        <nav class="navbar">
+            
+            <ul class="nav-menu">
+                <li>
+                    <div class="logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ECZhfVK6YyZnvSCAcRXuS1to6a3W-7Hc7g&s" alt="logo">
+                    </div>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Recipes</a>
+                    <div class="dropdown">
+                        <a href="#breakfast">Breakfast</a>
+                        <a href="#lunch">Lunch</a>
+                        <a href="#dinner">Dinner</a>
+                        <a href="#dessert">Dessert</a>
+                        <a href="#drink">Drink</a>
+                        <a href="#snacks">Snacks & Appetizers</a>
+                        <a href="#holiday">Holiday & Seasonal Recipes</a>
+                        <a href="#diet">Recipes by Diet</a>
+                        <a href="#method">Recipe by Method</a>
+                        <a href="#ingredient">Recipe by Ingredient</a>
+                        <a href="#time-ease">Recipe by Time & Ease</a>
+                        <a href="#cuisine">Recipe by Cuisine</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Easy Pastas</a>
+                    <div class="dropdown">
+                        <a href="#quick-dinner">Quick Dinner</a>
+                        <a href="#easy-healthy">Easy & Healthy</a>
+                        <a href="#quick-vegetarian">Quick Vegetarian</a>
+                        <a href="#easy-pastas">Easy Pastas</a>
+                        <a href="#easy-chicken">Easy Chicken</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Table</a>
+                    <div class="dropdown">
+                        <a href="#recent">Most Recent</a>
+                        <a href="#news-trends">News & Trends</a>
+                        <a href="#voices">Voices</a>
+                        <a href="#groceries">Groceries</a>
+                        <a href="#features">Features</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Holidays & Seasons</a>
+                    <div class="dropdown">
+                        <a href="#retro-summer">Our Favorite Retro Summer Baking Recipes</a>
+                        <a href="#back-school">Back-to-School Dinner Solutions</a>
+                        <a href="#labor-day">Labor Day Recipes</a>
+                        <a href="#view-all">View All</a>
+                    </div>
+                </li>
+                <li><a href="#">About Us</a></li>
+                <li> <a href="s.html"><button class="add">Add </button></a>
+                </li>
+            </ul>
+            <div class="search-bar">
+            <input type="text" id="search-bar" placeholder="Search recipes...">
+                <button class="search">🔍</button>
+            
+            <a href="re.html"><button class="heart-icon">❤️</button></a>
+        </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>veg Food Menu</h1>
+        <ul id="food-list">
+            <li>
+                <div class="food-container">
+                    <div class="image-container">
+                        <img src="https://media.istockphoto.com/id/700521614/photo/masala-pavbhaji-or-pav-bhaji.jpg?b=1&s=612x612&w=0&k=20&c=GlPb7EaD3y-olYdjJtiIEjeZ7MYby6MtSrrjkofpMQU=" alt="Pav Bhaji" class="emoji">
+                    </div>
+                    <span class="food-name">Pav Bhaji</span>
+                </div>
+                <button class="order-btn" data-food="Pav Bhaji"><a href="veg1.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div class="image-container">
+                        <img src="https://media.istockphoto.com/id/1273066728/photo/image-of-kadhai-balti-dish-containing-vegetarian-meal-palak-paneer-recipe-beside-a-dark-blue.jpg?b=1&s=612x612&w=0&k=20&c=_v7usPs53csazeyK9Kqnj-NQvhrnuQAhJsXu4xvsjHo=" alt="Palak Paneer" class="emoji">
+                    </div>
+                    <span class="food-name">Palak Paneer</span>
+                </div>
+                <button class="order-btn" data-food="Palak Paneer"><a href="veg2.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div class="image-container">
+                        <img src="https://media.istockphoto.com/id/495184588/photo/indian-pulav-vegetable-rice-veg-biryani-basmati-rice.jpg?b=1&s=612x612&w=0&k=20&c=ER8FkPVzK0jA-dbt5BV_h1slIWSknvPUJdH8QlheOvM=" alt="Veg Biryani" class="emoji">
+                    </div>
+                    <span class="food-name">Veg Biryani</span>
+                </div>
+                <button class="order-btn" data-food="Veg Biryani"><a href="veg3.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div class="image-container">
+                        <img src="https://media.istockphoto.com/id/1292633282/photo/chole-bhature-spicy-chick-peas-curry-also-known-as-chole-or-channa-masala-is-traditional.jpg?b=1&s=612x612&w=0&k=20&c=sHeK8mSOACWMHGdJqIzuwJxsBrnl0awF0g3Becib4t8=" alt="Chole Bhature" class="emoji">
+                    </div>
+                    <span class="food-name">Chole Bhature</span>
+                </div>
+                <button class="order-btn" data-food="Chole Bhature"><a href="veg4.html">Go To Recipe</a></button>
+            </li>
+            <li>
+                <div class="food-container">
+                    <div class="image-container">
+                        <img src="https://img.freepik.com/premium-photo/tasty-methi-paratha-isolated-white-background_787273-22549.jpg" alt="Methi Paratha" class="emoji">
+                    </div>
+                    <span class="food-name">Methi Paratha</span>
+                </div>
+                <button data-food="Methi Paratha"><a href="veg5.html">Go To Recipe</a></button>
+            </li>
+            </li>
+             </ul>
+        
+    </div>
+    
+        </body>
+</html>
